@@ -24,4 +24,12 @@ router.post('/products/like/:id', async function (req, res) {
     res.json(product);
 });
 
+router.delete('/products/like/:id', async function (req, res) {
+    const id = parseInt(req.params.id);
+    const product = await Product.findByPk(id);
+    product.num_likes--;
+    await product.save()
+    res.json(product);
+})
+
 module.exports = router;
