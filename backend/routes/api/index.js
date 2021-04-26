@@ -28,6 +28,9 @@ router.post('/products/like/:id', async function (req, res) {
 router.delete('/products/like/:id', async function (req, res) {
     const id = parseInt(req.params.id);
     const product = await Product.findByPk(id);
+    if (product.num_likes === 0) {
+        return res.json(product)
+    }
     product.num_likes--;
     await product.save()
     res.json(product);

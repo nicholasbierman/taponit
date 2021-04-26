@@ -4,6 +4,7 @@ import { fetchSingleProductById } from '../../store/singleProduct';
 import { useEffect } from "react";
 import LikeButton from "../LikeButton";
 import ProductDetails from '../ProductDetails';
+import UnlikeButton from "../UnlikeButton";
 
 
 export const SinglePage = () => {
@@ -27,6 +28,7 @@ export const SinglePage = () => {
         />
       )}
       {singleProduct && <LikeButton id={singleProduct.id} />}
+      {singleProduct && <UnlikeButton id={singleProduct.id} />}
     </div>
   );
 };
