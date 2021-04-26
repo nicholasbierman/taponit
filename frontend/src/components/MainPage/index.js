@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchProducts } from '../../store/products';
