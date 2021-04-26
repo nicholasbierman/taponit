@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import { NavLink, Link, Redirect } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import './product.css';
 import { useDispatch } from 'react-redux';
 import { fetchSingleProductById } from '../../store/singleProduct';
-import { useEffect } from 'react';
-import LikeButton from '../LikeButton';
 
 export const Product = ({ id, title, description, img, price, num_likes }) => {
     const dispatch = useDispatch();
