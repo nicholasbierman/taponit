@@ -12,12 +12,6 @@ export const fetchProducts = () => async dispatch => {
     return response;
 };
 
-export const likeProduct = (id) => async dispatch => {
-    const response = await fetch(`/api/products/like/${id}`, {
-        method: "POST"
-    });
-    return response;
-};
 
 const initialState = { products: [] };
 

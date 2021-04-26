@@ -11,6 +11,23 @@ export const fetchSingleProductById = (id) => async (dispatch) => {
   return dispatch(setSingleProduct(data));
 };
 
+export const likeProduct = (id) => async (dispatch) => {
+  const response = await fetch(`/api/products/like/${id}`, {
+    method: "POST",
+  });
+  const data = await response.json();
+  return dispatch(setSingleProduct(data));
+};
+
+export const unlikeProduct = (id) => async (dispatch) => {
+  const response = await fetch(`/api/products/like/${id}`, {
+    method: "DELETE",
+  });
+  const data = await response.json();
+  return dispatch(setSingleProduct(data));
+}
+
+
 const initialState = { singleProduct: null };
 
 function reducer(state = initialState, action) {

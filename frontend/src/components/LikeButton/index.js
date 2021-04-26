@@ -1,10 +1,10 @@
 import { useDispatch } from "react-redux";
-import { likeProduct } from "../../store/products";
+import { likeProduct } from "../../store/singleProduct";
 
 
-export const LikeButton = (id) => {
+export const LikeButton = ({ id }) => {
     const dispatch = useDispatch();
-    const handleClick = (e) => {
+    const handleClick = () => {
         dispatch(likeProduct(id))
     }
     return (
