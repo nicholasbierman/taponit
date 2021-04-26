@@ -5,11 +5,13 @@ import App from './App';
 import configureStore from "./store";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
+import { fetchProducts } from './store/products';
 
 const store = configureStore();
 
 if (process.env.NODE_ENV !== "production") {
   window.store = store;
+  window.fetchProducts = fetchProducts;
 };
 
 function Root() {

@@ -7,7 +7,15 @@ const setProducts = (products) => ({
 
 export const fetchProducts = () => async dispatch => {
     const response = await fetch('/api/products');
-    dispatch(setProducts(response.data));
+    const data = await response.json();
+    await dispatch(setProducts(data));
+    return response;
+};
+
+export const likeProduct = (id) => async dispatch => {
+    const response = await fetch(`/api/products/like/${id}`, {
+        method: "POST"
+    });
     return response;
 };
 
