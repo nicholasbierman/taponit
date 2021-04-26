@@ -19,10 +19,7 @@ export const Product = ({ id, title, description, img, price, num_likes }) => {
         <div className="Product-container">
             <NavLink id={id} to={`/products/${id}`} onClick={handleClick}>{id}: {title}</NavLink>
             <img src={img} alt={title} />
-            Description: {description} <br />
             Price: ${price} <br />
-            Likes: {num_likes} <br />
-            <LikeButton />
         </div>
     );
 };

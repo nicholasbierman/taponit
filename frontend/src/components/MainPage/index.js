@@ -17,7 +17,7 @@ export const MainPage = () => {
             <h1>All Products</h1>
             {products && products.map((product, i) => {
                 return (<Product key={i} id={product.id} title={product.title}
-                    description={product.description} img={product.img} price={product.price} num_likes={product.num_likes} />);
+                    description={product.description} img={product.img} price={product.price} />);
             })}
         </div>
     );
