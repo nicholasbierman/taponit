@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Product } from "../Product";
 import LikeButton from "../LikeButton";
 import ProductDetails from '../ProductDetails';
@@ -12,21 +12,20 @@ export const SinglePage = () => {
   return (
     <div>
       {singleProduct && (
+        <div>
         <Product
           id={singleProduct.id}
           title={singleProduct.title}
           img={singleProduct.img}
           price={singleProduct.price}
         />
-      )}
-      {singleProduct && (
         <ProductDetails
           description={singleProduct.description}
           num_likes={singleProduct.num_likes}
         />
-      )}
-      {singleProduct && <LikeButton id={singleProduct.id} />}
-      {singleProduct && <UnlikeButton id={singleProduct.id} />}
+          <LikeButton id={singleProduct.id} />
+          <UnlikeButton id={singleProduct.id} />
+      </div>)}
       <BackButton />
     </div>
   );
