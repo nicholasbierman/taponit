@@ -1,6 +1,14 @@
 # taponit
 Coding challenge for TapOnIt's Software Engineer position
 
+## Getting Started
+To run the local environment environment, please:
+1. <code>cd</code> into the project directory and run <code>npm install</code>
+2. Create a <code>.env</code> file in the <code>backend</code> directory. An example is provided for you. 
+3. Run <code>npx dotenv sequelize db:create</code> to setup the database for you. 
+4. In the <code>backend</code> directory, run <code>npm start</code>
+5. <code>cd</code> into the <code>frontend</code> directory and run <code>npm start</code>
+
 
 ## PostgreSQL Schema
 ### Products
