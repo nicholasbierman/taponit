@@ -17,7 +17,7 @@ export const Product = ({ id, title, description, img, price, num_likes }) => {
 
     return (
         <div className="Product-container">
-            <NavLink id={id} to={`/products/${id}`} onClick={handleClick}>{id}: {title}</NavLink>
+            <NavLink id={id} to={`/products/${id}`} onClick={handleClick}>{title}</NavLink>
             <img src={img} alt={title} />
             Price: ${price} <br />
         </div>
