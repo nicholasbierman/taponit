@@ -6,8 +6,10 @@ To run the local environment environment, please:
 1. <code>cd</code> into the project directory and run <code>npm install</code>
 2. Create a <code>.env</code> file in the <code>backend</code> directory. An example is provided for you. 
 3. Run <code>npx dotenv sequelize db:create</code> to setup the database for you. 
-4. In the <code>backend</code> directory, run <code>npm start</code>
-5. <code>cd</code> into the <code>frontend</code> directory and run <code>npm start</code>
+4. Run <code>npx dotenv sequelize db:migrate</code> to create the "Products" table.
+5. Run <code>npx dotenv sequelize db:seed:all</code> to run the seeder file. 
+6. In the <code>backend</code> directory, run <code>npm start</code>
+7. <code>cd</code> into the <code>frontend</code> directory and run <code>npm start</code>
 
 
 ## PostgreSQL Schema
